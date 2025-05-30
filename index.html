@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Windows 95 Simulator</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="desktop">
+    <div class="icon" onclick="openApp('myComputer')">
+      <img src="icons/mycomputer.png" alt="My Computer" />
+      <span>My Computer</span>
+    </div>
+    <div class="icon" onclick="openApp('explorer')">
+      <img src="icons/explorer.png" alt="Explorer" />
+      <span>Explorer</span>
+    </div>
+    <div class="icon" onclick="openApp('notepad')">
+      <img src="icons/notepad.png" alt="Notepad" />
+      <span>Notepad</span>
+    </div>
+    <div class="icon" onclick="openApp('internet')">
+      <img src="icons/internet.png" alt="Internet" />
+      <span>Internet</span>
+    </div>
+  </div>
+
+  <div id="taskbar">
+    <button id="startBtn" onclick="toggleStart()">Start</button>
+    <div id="startMenu" class="hidden">
+      <div onclick="openApp('myComputer')">💻 My Computer</div>
+      <div onclick="openApp('explorer')">🗂️ Explorer</div>
+      <div onclick="openApp('notepad')">📝 Notepad</div>
+      <div onclick="openApp('internet')">🌐 Internet</div>
+    </div>
+  </div>
+
+  <!-- Ferestre -->
+  <div class="window hidden" id="myComputer">
+    <div class="title-bar"><span>My Computer</span><button onclick="closeApp('myComputer')">X</button></div>
+    <div class="window-content">Aceasta este o fereastră falsă „My Computer”.</div>
+  </div>
+
+  <div class="window hidden" id="explorer">
+    <div class="title-bar"><span>Explorer</span><button onclick="closeApp('explorer')">X</button></div>
+    <div class="window-content">Aceasta este o fereastră Explorer.</div>
+  </div>
+
+  <div class="window hidden" id="notepad">
+    <div class="title-bar"><span>Notepad</span><button onclick="closeApp('notepad')">X</button></div>
+    <div class="window-content"><textarea placeholder="Scrie ceva..."></textarea></div>
+  </div>
+
+  <div class="window hidden" id="internet">
+    <div class="title-bar"><span>Internet Explorer</span><button onclick="closeApp('internet')">X</button></div>
+    <div class="window-content">Simulare Internet Explorer.</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
