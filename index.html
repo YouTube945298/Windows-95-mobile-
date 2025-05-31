@@ -9,25 +9,28 @@
 <body>
   <div id="desktop">
     <div class="icon" onclick="openApp('myComputer')">
-      <img src="icons/mycomputer.png" alt="My Computer" />
+      <img src="icons/mycomputer.png" alt="My Computer">
       <span>My Computer</span>
     </div>
     <div class="icon" onclick="openApp('explorer')">
-      <img src="icons/explorer.png" alt="Explorer" />
+      <img src="icons/explorer.png" alt="Explorer">
       <span>Explorer</span>
     </div>
     <div class="icon" onclick="openApp('notepad')">
-      <img src="icons/notepad.png" alt="Notepad" />
+      <img src="icons/notepad.png" alt="Notepad">
       <span>Notepad</span>
     </div>
     <div class="icon" onclick="openApp('internet')">
-      <img src="icons/internet.png" alt="Internet" />
+      <img src="icons/internet.png" alt="Internet">
       <span>Internet</span>
     </div>
   </div>
 
   <div id="taskbar">
-    <button id="startBtn" onclick="toggleStart()">Start</button>
+    <button id="startBtn" onclick="toggleStart()">
+      <img src="icons/windows95.png" alt="Start">
+      Start
+    </button>
     <div id="startMenu" class="hidden">
       <div onclick="openApp('myComputer')">💻 My Computer</div>
       <div onclick="openApp('explorer')">🗂️ Explorer</div>
@@ -36,26 +39,47 @@
     </div>
   </div>
 
-  <!-- Ferestre -->
+  <!-- Ferestre aplicații -->
   <div class="window hidden" id="myComputer">
-    <div class="title-bar"><span>My Computer</span><button onclick="closeApp('myComputer')">X</button></div>
-    <div class="window-content">Aceasta este o fereastră falsă „My Computer”.</div>
+    <div class="title-bar">
+      <span>My Computer</span>
+      <button onclick="closeApp('myComputer')">X</button>
+    </div>
+    <div class="window-content">Aceasta este fereastra „My Computer”.</div>
   </div>
 
   <div class="window hidden" id="explorer">
-    <div class="title-bar"><span>Explorer</span><button onclick="closeApp('explorer')">X</button></div>
-    <div class="window-content">Aceasta este o fereastră Explorer.</div>
+    <div class="title-bar">
+      <span>Explorer</span>
+      <button onclick="closeApp('explorer')">X</button>
+    </div>
+    <div class="window-content">Aceasta este fereastra „Explorer”.</div>
   </div>
 
   <div class="window hidden" id="notepad">
-    <div class="title-bar"><span>Notepad</span><button onclick="closeApp('notepad')">X</button></div>
-    <div class="window-content"><textarea placeholder="Scrie ceva..."></textarea></div>
+    <div class="title-bar">
+      <span>Notepad</span>
+      <button onclick="closeApp('notepad')">X</button>
+    </div>
+    <div class="window-content">
+      <textarea placeholder="Scrie ceva..."></textarea>
+    </div>
   </div>
 
   <div class="window hidden" id="internet">
-    <div class="title-bar"><span>Internet Explorer</span><button onclick="closeApp('internet')">X</button></div>
-    <div class="window-content">Simulare Internet Explorer.</div>
+    <div class="title-bar">
+      <span>Internet Explorer</span>
+      <button onclick="closeApp('internet')">X</button>
+    </div>
+    <div class="window-content">
+      <p>Simulare Internet Explorer.</p>
+    </div>
   </div>
+
+  <!-- Muzică de fundal -->
+  <audio id="bgMusic" autoplay loop hidden>
+    <source src="music/background.mp3" type="audio/mpeg">
+  </audio>
 
   <script src="script.js"></script>
 </body>
