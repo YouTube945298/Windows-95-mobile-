@@ -12,7 +12,7 @@ function closeApp(id) {
   document.getElementById(id).classList.add('hidden');
 }
 
-// drag and move windows
+// drag & move windows
 let dragTarget = null, offsetX = 0, offsetY = 0;
 
 document.addEventListener('mousedown', (e) => {
@@ -34,7 +34,7 @@ document.addEventListener('mouseup', () => {
   dragTarget = null;
 });
 
-// pentru redare audio pe mobil la primul click
+// activare muzică la primul clic (pentru mobil)
 window.addEventListener('click', function playMusicOnce() {
   const music = document.getElementById('bgMusic');
   if (music) music.play();
