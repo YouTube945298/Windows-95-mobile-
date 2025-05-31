@@ -33,3 +33,10 @@ document.addEventListener('mousemove', (e) => {
 document.addEventListener('mouseup', () => {
   dragTarget = null;
 });
+
+// pentru redare audio pe mobil la primul click
+window.addEventListener('click', function playMusicOnce() {
+  const music = document.getElementById('bgMusic');
+  if (music) music.play();
+  window.removeEventListener('click', playMusicOnce);
+});
